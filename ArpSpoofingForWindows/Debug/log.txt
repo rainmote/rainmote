@@ -1,0 +1,19 @@
+2015/05/20 20:42:15 find all adapter dev.
+2015/05/20 20:42:15 Description:[0]Network adapter 'VMware Virtual Ethernet Adapter' on local host
+2015/05/20 20:42:15 Description:[1]Network adapter 'Microsoft' on local host
+2015/05/20 20:42:15 Description:[2]Network adapter 'Broadcom NetLink (TM) Gigabit Ethernet Driver' on local host
+2015/05/20 20:42:15 Description:[3]Network adapter 'VMware Virtual Ethernet Adapter' on local host
+2015/05/20 20:42:15 set focus dev(Network adapter 'VMware Virtual Ethernet Adapter' on local host)
+2015/05/20 20:42:19 set focus dev(Network adapter 'Microsoft' on local host)
+2015/05/20 20:42:20 localIp:192.168.1.111
+2015/05/20 20:42:20 set focus dev(Network adapter 'Microsoft' on local host)
+2015/05/20 20:42:20 open focus dev(Network adapter 'Microsoft' on local host)
+2015/05/20 20:42:21 LocalIp: 192.168.1.111
+2015/05/20 20:42:21 LocalMac: 08:ED:B9:55:58:D8
+2015/05/20 20:42:21 Create sniffer thread:460
+2015/05/20 20:42:25 check alive 1
+2015/05/20 20:42:25 check alive 100
+2015/05/20 20:42:25 check alive 101
+2015/05/20 20:42:25 check alive 102
+2015/05/20 20:42:25 check alive 113
+2015/05/20 20:42:31 +selected 1 5 0

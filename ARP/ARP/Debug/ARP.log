@@ -1,0 +1,18 @@
+﻿生成启动时间为 2015/5/16 11:32:20。
+     1>项目“E:\GitHub\mote\ARP\ARP\ARP.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt test.cpp
+         test.cpp
+     1>e:\github\mote\arp\arp\test.cpp(88): warning C4101: “recvPacket”: 未引用的局部变量
+     1>e:\github\mote\arp\arp\test.cpp(88): warning C4101: “packet”: 未引用的局部变量
+     1>cl : 命令行 warning D9028: 最小重新生成失败，正在转换为标准生成
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\GitHub\mote\ARP\Debug\ARP.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\GitHub\mote\ARP\Debug\ARP.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\GitHub\mote\ARP\Debug\ARP.lib" /MACHINE:X86 Debug\arp.obj
+         Debug\snifferArpResponse.obj
+         Debug\test.obj
+         ARP.vcxproj -> E:\GitHub\mote\ARP\Debug\ARP.exe
+     1>已完成生成项目“E:\GitHub\mote\ARP\ARP\ARP.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.93

@@ -159,7 +159,10 @@ public class FingerprintingAPI {
 		}
 		
 		try {
-			res.close();
+			if (res != null) {
+				res.close();
+			}
+			
 			stam.close();
 			conn.close();
 		} catch (SQLException e) {

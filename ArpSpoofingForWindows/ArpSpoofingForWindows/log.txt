@@ -250,3 +250,33 @@
 2015/05/20 20:47:36 check alive 103
 2015/05/20 20:47:36 check alive 113
 2015/05/20 20:47:40 +selected 1 5 0
+2015/05/27 14:59:02 find all adapter dev.
+2015/05/27 14:59:02 Description:[0]Network adapter 'TAP-Windows Adapter V9' on local host
+2015/05/27 14:59:02 Description:[1]Network adapter 'VMware Virtual Ethernet Adapter' on local host
+2015/05/27 14:59:02 Description:[2]Network adapter 'Microsoft' on local host
+2015/05/27 14:59:02 Description:[3]Network adapter 'Broadcom NetLink (TM) Gigabit Ethernet Driver' on local host
+2015/05/27 14:59:02 Description:[4]Network adapter 'VMware Virtual Ethernet Adapter' on local host
+2015/05/27 14:59:02 set focus dev(Network adapter 'TAP-Windows Adapter V9' on local host)
+2015/05/27 14:59:07 set focus dev(Network adapter 'Microsoft' on local host)
+2015/05/27 14:59:09 localIp:192.168.1.101
+2015/05/27 14:59:09 set focus dev(Network adapter 'Microsoft' on local host)
+2015/05/27 14:59:09 open focus dev(Network adapter 'Microsoft' on local host)
+2015/05/27 14:59:10 LocalIp: 192.168.1.101
+2015/05/27 14:59:10 LocalMac: 08:ED:B9:55:58:D8
+2015/05/27 14:59:10 Create sniffer thread:468
+2015/05/27 14:59:14 check alive 1
+2015/05/27 14:59:14 check alive 102
+2015/05/27 14:59:14 check alive 103
+2015/05/27 14:59:14 check alive 104
+2015/05/27 15:01:59 localIp:192.168.1.101
+2015/05/27 15:01:59 set focus dev(Network adapter 'Microsoft' on local host)
+2015/05/27 15:01:59 open focus dev(Network adapter 'Microsoft' on local host)
+2015/05/27 15:02:00 LocalIp: 192.168.1.101
+2015/05/27 15:02:00 LocalMac: 08:ED:B9:55:58:D8
+2015/05/27 15:02:00 Create sniffer thread:392
+2015/05/27 15:02:03 check alive 1
+2015/05/27 15:02:03 check alive 102
+2015/05/27 15:02:03 check alive 103
+2015/05/27 15:02:03 check alive 104
+2015/05/27 15:02:03 check alive 106
+2015/05/27 15:02:05 +selected 4 5 0

@@ -146,7 +146,7 @@ UINT Spoofing(LPVOID pParam)
 			memcpy(buf, mArp->getPacket(), sizeof(struct arp));
 			adapter->sendPacket(buf, sizeof(struct arp));
 		}
-		Sleep(1000);
+		Sleep(800);
 	}
 	return 0;
 }

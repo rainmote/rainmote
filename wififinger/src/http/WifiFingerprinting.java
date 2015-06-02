@@ -1,9 +1,7 @@
 package http;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintWriter;
-import java.util.Date;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -14,8 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-
-import util.Logger4Finger;
 
 public class WifiFingerprinting extends HttpServlet {
 

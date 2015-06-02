@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 public class Logger4Finger {
 	private Logger log = null;
-	//private static String filename = "/home/one/log/log-";
+//	private static String filename = "/home/one/log/log-";
 	private static String filename = "D:/log/log-";
 	
 	public Logger4Finger(String file) {

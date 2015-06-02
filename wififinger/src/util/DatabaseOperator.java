@@ -19,7 +19,7 @@ public class DatabaseOperator {
 	public Map<String, String> readConfig() {
 		Map<String, String> config = new HashMap<String, String>();
 		String filepath = "E:\\database.cnf";
-		//String filepath = "/alidata/server/mysql.cnf";
+//		String filepath = "/alidata/server/mysql.cnf";
 		File file = new File(filepath);
 		try {
 			FileInputStream io = new FileInputStream(file);

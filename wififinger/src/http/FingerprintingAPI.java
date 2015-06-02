@@ -1,5 +1,8 @@
 package http;
 
+import gaussian.LeastSquareMethod;
+import gaussian.Point;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -180,8 +183,8 @@ public class FingerprintingAPI {
 			return "";
 		}
 		logger.info(tList.toString());
-		int maxCountResult = tList.get(0).getKey();
-		JSONObject position = getPositionFromDatabase(maxCountResult);
+		//int maxCountResult = tList.get(0).getKey();
+		JSONObject position = getPositionFromDatabase(this.positionReuslt);
 		if (position == null) {
 			logger.info("select position return null");
 			return "";
@@ -197,7 +200,7 @@ public class FingerprintingAPI {
 		return result.toString();
 	}
 	
-	public JSONObject getPositionFromDatabase(int posId) {
+	public JSONObject getPositionFromDatabase(Map<Integer, Integer> positionResult) {
 		JSONObject obj = new JSONObject();
 		DatabaseOperator databaseOp = new DatabaseOperator();
 		Connection conn = databaseOp.getConnect();
@@ -207,25 +210,38 @@ public class FingerprintingAPI {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
+		String posId = "";
+		for (Integer key : positionResult.keySet()) {
+			posId += key.toString() + ",";
+		}
+		posId = posId.substring(0, posId.length() - 1);
+		Map<Point, Double> resultMap = new HashMap<Point, Double>(); //存储结果集，用于结果修正计算
 		//String sql = "select x_pos,y_pos from indoor where id=" + posId + " and map_id='" + this.mapId + "';";
-		String sql = "select x_pos,y_pos from indoor where id=" + posId + ";";
+		String sql = "select id,x_pos,y_pos from indoor where id in (" + posId + ");";
 		logger.info("Select Result Sql:" + sql);
 		ResultSet res = databaseOp.getResultSet(stam, sql);
 		try {
 			if(res.next()){
 				do {
-					obj.put("x", res.getString(1));
-					obj.put("y", res.getString(2));
+					int pos_id = res.getInt(1);
+					logger.info(res.getString(2) + ","+ res.getString(3));
+					Point tPoint = new Point(res.getDouble(2), res.getDouble(3));
+					resultMap.put(tPoint, (double) positionResult.get(pos_id));
 				} while(res.next());
 			} else {
 				return null;
 			}
+			LeastSquareMethod m = new LeastSquareMethod();
+			m.setPointList(resultMap);
+			Point p = m.calcTargetPosition();
+			obj.put("x", String.format("%.4f", p.getX()));
+			obj.put("y", String.format("%.4f", p.getY()));
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
+		
 
 		try {
 			res.close();
